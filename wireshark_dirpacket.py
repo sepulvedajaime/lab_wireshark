@@ -1,7 +1,9 @@
 import pyshark
 
+# Preparo archivo hashes.txt para almacer los hashes extraídos
 f = open("hashes.txt", "w")
-# Cargar el archivo de captura
+
+# Cargar el archivo de captura PCAP
 file = 'tsys_cat_tcpdump_12_30.pcap'
 pcap = pyshark.FileCapture(file, display_filter='f5ethtrailer.tls.keylog')
 
